@@ -10,17 +10,18 @@ The goal is a full understanding of the game, then a native PC port, then a rema
 
 ## Phase 0: materials
 
-- [ ] Verified dumps of the GameCube USA disc (`GUGE69`) and the PC v1.2 executable, with hashes in
-      [getting started](getting-started.md).
+- [x] A PC executable to work on: v1.0, Perforce change 116661 (see
+      [getting started](getting-started.md)).
+- [ ] A verified dump of the GameCube USA disc (`GUGE69`).
 - [ ] Inspect `Speed.elf`: which symbols it has, how much DWARF, which compiler versions
       (`.comment` section).
-- [ ] Identify the PC compiler from the `SPEED2.EXE` Rich header.
-- [ ] Check other builds for symbols: PAL GameCube (`GUGP69`), PS2 retail and the PS2 Alpha 10R
-      prototype, Xbox.
+- [x] Identify the PC compiler from the `SPEED2.EXE` Rich header: MSVC 7.1, build 3077.
+- [ ] Check other builds for symbols: PAL GameCube (`GUGP69`), the PS2 Alpha 10R prototype, Xbox.
+      The PS2 EU v2.00 retail ELF (`SLES_527.25`) is stripped: only section names survive.
 
 ## Phase 1: skeleton
 
-- [x] Build system adapted from nfsmw: GameCube (ProDG) and PC (MSVC 7.1).
+- [x] Build system adapted from nfsmw: GameCube (ProDG) and PC v1.0 and v1.2 (MSVC 7.1).
 - [ ] GameCube: `symbols.txt` and `splits.txt` generated from `Speed.elf`; the unmodified split
       rebuilds to the original DOL hash.
 - [ ] PC: disassembler database seeded with GameCube names and the facts from yugecin/nfsu2-re;

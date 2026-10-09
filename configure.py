@@ -35,7 +35,8 @@ from tools.project import (
 DEFAULT_VERSION = 0
 VERSIONS = [
     "GUGE69",  # 0: GameCube, USA. Ships Speed.elf with symbols.
-    "SPEED2_EXE_1_2",  # 1: PC, SPEED2.EXE v1.2 (4,800,512 bytes)
+    "SPEED2_EXE_1_0",  # 1: PC, SPEED2.EXE v1.0 (4,788,224 bytes, CL 116661)
+    "SPEED2_EXE_1_2",  # 2: PC, SPEED2.EXE v1.2 (4,800,512 bytes)
 ]
 
 parser = argparse.ArgumentParser()
@@ -162,7 +163,7 @@ if version_num == 0:
     config.dtk_tag = "v1.8.32"
     config.binutils_tag = "2.42-1"
     config.wibo_tag = "1.1.0"  # sjiswrap segfaults on newer wibo
-elif version_num == 1:
+elif version_num in [1, 2]:
     config.platform = Platform.WIN32
     config.delink_tag = "v0.16.4"
     config.wibo_tag = "1.2.0"
@@ -218,8 +219,8 @@ config.reconfig_deps = []
 
 # The toolchains below are the ones Black Box used for Most Wanted (2005).
 # Underground 2 (2004) most likely used the same ones, but that is unverified:
-# check the .comment section of Speed.elf (GameCube) and the Rich header of
-# SPEED2.EXE (PC) before trusting a match.
+# check the .comment section of Speed.elf (GameCube) before trusting a match.
+# The PC v1.0 Rich header confirms MSVC 7.1 (build 3077) for most objects.
 if config.platform == Platform.GC_WII:
     config.linker_version = "ProDG/3.9.3"
 

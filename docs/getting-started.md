@@ -21,20 +21,28 @@ ignored by git.
 
 The expected SHA-1 hashes will be listed here once the first dump is verified.
 
-### PC, v1.2 (`SPEED2_EXE_1_2`)
+### PC (`SPEED2_EXE_1_0`, `SPEED2_EXE_1_2`)
 
-1. Install the game from your own discs and apply the official 1.2 patch.
-2. Copy `SPEED2.EXE` to `orig/SPEED2_EXE_1_2/speed2.exe`.
+1. Install the game from your own discs. For v1.2, apply the official 1.2 patch.
+2. Copy `SPEED2.EXE` to `orig/SPEED2_EXE_1_0/speed2.exe` or `orig/SPEED2_EXE_1_2/speed2.exe`.
 
-The splitter needs the v1.2 executable with its code in plain form (4,800,512 bytes). The retail
-executable is wrapped in SafeDisc, which encrypts the code on disk. The expected SHA-1 will be
-listed here once it's verified.
+The retail executable is wrapped in SafeDisc, which encrypts the code on disk. The splitter needs
+the code in plain form. Tools that patch the executable (resolution patchers, for example) change
+bytes too: undo them before you compare.
+
+| Version | Size | PE timestamp | Notes |
+|---|---|---|---|
+| v1.0 | 4,788,224 bytes | 2004-10-25 23:37:44 | Perforce change 116661, entry point `0x75B9F1` |
+| v1.2 | 4,800,512 bytes | | Entry point `0x75BCC7`; the build yugecin/nfsu2-re documents |
+
+The v1.0 Rich header shows MSVC 7.1 (build 3077) for most objects, the same compiler as the
+Most Wanted PC version. Its strings name realcore 6.23.00 and snd 9.03.04.
 
 ## Build
 
 ```sh
 python configure.py                    # GameCube (default)
-python configure.py -v SPEED2_EXE_1_2  # PC
+python configure.py -v SPEED2_EXE_1_0  # PC
 ninja
 ```
 

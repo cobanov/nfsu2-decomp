@@ -40,13 +40,14 @@ assets, code or executables: bring your own copy of the game.
 | Version | Platform | Status |
 |---|---|---|
 | `GUGE69` | GameCube, USA | Waiting for the first verified dump |
-| `SPEED2_EXE_1_2` | PC, `SPEED2.EXE` v1.2 | Waiting for the first verified dump |
+| `SPEED2_EXE_1_0` | PC, `SPEED2.EXE` v1.0 | Executable identified, splitting next |
+| `SPEED2_EXE_1_2` | PC, `SPEED2.EXE` v1.2 | Wanted later: most community mods target it |
 
 ## Try it
 
 1. Install Python 3 and [ninja](https://ninja-build.org), then `pip install -r requirements.txt`.
 2. Put your own copy of the game in `orig/<version>/`. See [getting started](docs/getting-started.md).
-3. Run `python configure.py` (add `-v SPEED2_EXE_1_2` for PC), then `ninja`.
+3. Run `python configure.py` (add `-v SPEED2_EXE_1_0` for PC), then `ninja`.
 4. Open the project in [objdiff](https://github.com/encounter/objdiff) and pick a function.
 
 Compilers and tools download on the first build. On macOS and Linux the Windows compilers run
