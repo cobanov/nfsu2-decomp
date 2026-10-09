@@ -1,0 +1,17 @@
+# GameCube, USA (GUGE69).
+# See https://github.com/encounter/decomp-toolkit for every option.
+#
+# First-time setup (see docs/getting-started.md):
+# 1. Put your own disc image (ISO/RVZ) in orig/GUGE69/.
+# 2. Generate symbols and splits from the shipped, unstripped Speed.elf:
+#      build/tools/dtk elf config orig/GUGE69/files/Speed.elf config/GUGE69
+# 3. Fill in `hash` below with the SHA-1 of sys/main.dol and commit it.
+object_base: orig/GUGE69
+object: sys/main.dol
+# hash: <sha1 of sys/main.dol, filled in from the first verified dump>
+symbols: config/GUGE69/symbols.txt
+splits: config/GUGE69/splits.txt
+quick_analysis: false
+detect_objects: true
+detect_strings: true
+write_asm: true

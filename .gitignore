@@ -1,0 +1,56 @@
+# IDE folders
+.idea/
+.vs/
+
+# Caches
+__pycache__
+.mypy_cache
+.cache/
+
+# Original files
+orig/*/*
+!orig/*/.gitkeep
+*.dol
+*.rel
+*.elf
+*.o
+*.map
+*.MAP
+
+# Build files
+build/
+.ninja_*
+build.ninja
+
+# decompctx output
+ctx.*
+*.ctx
+
+# Generated configs
+objdiff.json
+compile_commands.json
+
+# Miscellaneous
+/*.txt
+*.exe
+/*.d
+
+symbols/
+src/Speed/Indep/Src/Generated/Hashes
+decompiled.cpp
+decompiled_ps2.cpp
+
+tools/elftools
+
+# Xbox 360
+vc80.pdb
+
+# PS2
+undefined_funcs_auto.txt
+undefined_syms_auto.txt
+.splache
+
+*.vsix
+
+# NGCCC temp files
+*.TMP

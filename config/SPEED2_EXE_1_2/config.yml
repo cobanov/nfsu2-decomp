@@ -1,0 +1,14 @@
+# PC, SPEED2.EXE v1.2 (4,800,512 bytes, unencrypted).
+# The retail executable is SafeDisc-wrapped, so its code sections are
+# encrypted on disk and can't be split until they're in plain form.
+#
+# symbols.json and splits.json are generated from a disassembler database
+# (see docs/getting-started.md). Names are seeded from the GameCube symbols
+# and from the yugecin/nfsu2-re IDA export.
+target_path: orig/SPEED2_EXE_1_2/speed2.exe
+
+splits_path: config/SPEED2_EXE_1_2/splits.json
+symbols_path: config/SPEED2_EXE_1_2/symbols.json
+
+# Translation units, added as they're identified.
+splits: []
