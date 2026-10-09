@@ -10,8 +10,8 @@ The goal is a full understanding of the game, then a native PC port, then a rema
 
 ## Phase 0: materials
 
-- [x] A PC executable to work on: v1.0, Perforce change 116661 (see
-      [getting started](getting-started.md)).
+- [x] PC executables to work on: v1.0 (Perforce change 116661) and v1.2 (change 126890). See
+      [getting started](getting-started.md).
 - [ ] A verified dump of the GameCube USA disc (`GUGE69`).
 - [ ] Inspect `Speed.elf`: which symbols it has, how much DWARF, which compiler versions
       (`.comment` section).

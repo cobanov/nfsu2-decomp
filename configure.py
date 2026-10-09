@@ -36,7 +36,7 @@ DEFAULT_VERSION = 0
 VERSIONS = [
     "GUGE69",  # 0: GameCube, USA. Ships Speed.elf with symbols.
     "SPEED2_EXE_1_0",  # 1: PC, SPEED2.EXE v1.0 (4,788,224 bytes, CL 116661)
-    "SPEED2_EXE_1_2",  # 2: PC, SPEED2.EXE v1.2 (4,800,512 bytes)
+    "SPEED2_EXE_1_2",  # 2: PC, SPEED2.EXE v1.2 (4,800,512 bytes, CL 126890)
 ]
 
 parser = argparse.ArgumentParser()

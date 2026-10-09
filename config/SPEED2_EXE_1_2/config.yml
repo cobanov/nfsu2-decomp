@@ -1,4 +1,6 @@
-# PC, SPEED2.EXE v1.2 (4,800,512 bytes, unencrypted).
+# PC, SPEED2.EXE v1.2: 4,800,512 bytes, Perforce change 126890 (2005-02-09,
+# "Bump PC version number."), entry point 0x75BCC7. This is the build
+# yugecin/nfsu2-re and most community mods target.
 # The retail executable is SafeDisc-wrapped, so its code sections are
 # encrypted on disk and can't be split until they're in plain form.
 #

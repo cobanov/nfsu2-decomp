@@ -41,7 +41,7 @@ assets, code or executables: bring your own copy of the game.
 |---|---|---|
 | `GUGE69` | GameCube, USA | Waiting for the first verified dump |
 | `SPEED2_EXE_1_0` | PC, `SPEED2.EXE` v1.0 | Executable identified, splitting next |
-| `SPEED2_EXE_1_2` | PC, `SPEED2.EXE` v1.2 | Wanted later: most community mods target it |
+| `SPEED2_EXE_1_2` | PC, `SPEED2.EXE` v1.2 | Executable identified; the build most community mods target |
 
 ## Try it
 

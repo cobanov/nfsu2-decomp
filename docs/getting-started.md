@@ -28,12 +28,14 @@ The expected SHA-1 hashes will be listed here once the first dump is verified.
 
 The retail executable is wrapped in SafeDisc, which encrypts the code on disk. The splitter needs
 the code in plain form. Tools that patch the executable (resolution patchers, for example) change
-bytes too: undo them before you compare.
+bytes too: undo them before you compare. A SafeDisc-free executable can also carry an extra section
+and a rewritten PE timestamp left by the tool that removed the wrapper; neither affects the game's
+code.
 
 | Version | Size | PE timestamp | Notes |
 |---|---|---|---|
 | v1.0 | 4,788,224 bytes | 2004-10-25 23:37:44 | Perforce change 116661, entry point `0x75B9F1` |
-| v1.2 | 4,800,512 bytes | | Entry point `0x75BCC7`; the build yugecin/nfsu2-re documents |
+| v1.2 | 4,800,512 bytes | | Perforce change 126890 (2005-02-09), entry point `0x75BCC7`; the build yugecin/nfsu2-re documents |
 
 The v1.0 Rich header shows MSVC 7.1 (build 3077) for most objects, the same compiler as the
 Most Wanted PC version. Its strings name realcore 6.23.00 and snd 9.03.04.
